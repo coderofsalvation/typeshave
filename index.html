@@ -32,10 +32,21 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <p><img src="https://camo.githubusercontent.com/c784f14f7c15fec9fa475bd2789be46d2cb96943/687474703a2f2f636f6465726f6673616c766174696f6e2e6769746875622e696f2f7479706573686176652f6c6f676f2e706e67"><br>
-Prevent functions from exploding with garbage-in garbage-out.</p>
+Wrap functions with typeshave to prevent functions doing garbage-in/garbage-out.</p>
 
 <h2>
 <a id="php-basics" class="anchor" href="#php-basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>PHP BASICS</h2>
+
+<pre><code>function foo($foo, $bar){
+  TypeShave::check( func_get_args(), (object)array(
+    "foo" =&gt; (object)array( "type" =&gt; "string" ),
+    "bar" =&gt; (object(array( "type" =&gt; "integer" )
+  ));
+  // do stuff with valid data
+}
+</code></pre>
+
+<p>oh heck, we can just write jsonschema as well:</p>
 
 <pre><code>function foo($foo, $bar){
   TypeShave::check( func_get_args(), '{
