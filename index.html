@@ -34,7 +34,7 @@
           <h1>
 <a id="typeshave" class="anchor" href="#typeshave" aria-hidden="true"><span class="octicon octicon-link"></span></a>Typeshave</h1>
 
-<p>Guard your function's incoming data using typeshave wrappers in JS &amp; PHP (typeshave website).</p>
+<p>Guard your function's incoming data using typeshave wrappers in JAVASCRIPT &amp; PHP.</p>
 
 <p></p>
 <img src="https://camo.githubusercontent.com/c784f14f7c15fec9fa475bd2789be46d2cb96943/687474703a2f2f636f6465726f6673616c766174696f6e2e6769746875622e696f2f7479706573686176652f6c6f676f2e706e67">
@@ -43,7 +43,25 @@
 <p>Prevent functions from exploding with garbage-in garbage-out.</p>
 
 <h2>
-<a id="javascript--coffeescript" class="anchor" href="#javascript--coffeescript" aria-hidden="true"><span class="octicon octicon-link"></span></a>JAVASCRIPT / COFFEESCRIPT</h2>
+<a id="browser" class="anchor" href="#browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>BROWSER</h2>
+
+<pre><code>&lt;script src="https://raw.githubusercontent.com/coderofsalvation/typeshave.js/master/browser/typeshave.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  typeshave = require("typeshave").typesafe;
+
+  var foo = typeshave({
+    foo: { type: "string" },
+    bar: { type: "boolean" }
+  }, function(foo,bar){
+    alert("ok data passed!");
+  });
+
+  foo( "string", true );
+&lt;/script&gt;
+</code></pre>
+
+<h2>
+<a id="nodejs--coffeescript" class="anchor" href="#nodejs--coffeescript" aria-hidden="true"><span class="octicon octicon-link"></span></a>NODEJS / COFFEESCRIPT</h2>
 
 <p>see the npm module <a href="https://www.npmjs.com/package/typeshave">here</a></p>
 
