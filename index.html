@@ -42,8 +42,42 @@
 
 <p>Prevent functions from exploding with garbage-in garbage-out.</p>
 
+<p>Not only type-checking, but also regexes an recursive checks are supported.</p>
+
 <h2>
-<a id="browser" class="anchor" href="#browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>BROWSER</h2>
+<a id="php-basics" class="anchor" href="#php-basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>PHP BASICS</h2>
+
+<pre><code>function foo($foo, $bar){
+  TypeShave::check( func_get_args(), '{
+    "foo": { "type": "string"  },
+    "bar": { "type": "integer" }
+  }');
+  // do stuff with valid data
+}
+</code></pre>
+
+<blockquote>
+<p>see the composer more <a href="https://packagist.org/packages/coderofsalvation/typeshave">here</a> or the github repo <a href="https://github.com/coderofsalvation/typeshave.php">here</a></p>
+</blockquote>
+
+<h2>
+<a id="nodejs-basics" class="anchor" href="#nodejs-basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>NODEJS BASICS</h2>
+
+<pre><code>COFFEESCRIPT                          JAVASCRIPT
+============                          ==========
+foo = typesafe                        var foo = typesafe({
+  foo: { type: "string"  }              foo: { type: "string" }
+  bar: { type: "integer" }              bar: { type: "integer" }
+, ( foo, bar ) -&gt;                     }, function(foo, bar) {
+  console.log "arguments are valid"     return console.log("arguments are valid");
+</code></pre>
+
+<blockquote>
+<p>see the npm module <a href="https://www.npmjs.com/package/typeshave">here</a></p>
+</blockquote>
+
+<h2>
+<a id="in-the-browser" class="anchor" href="#in-the-browser" aria-hidden="true"><span class="octicon octicon-link"></span></a>IN THE BROWSER</h2>
 
 <pre><code>&lt;script src="https://raw.githubusercontent.com/coderofsalvation/typeshave.js/master/browser/typeshave.min.js"&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -59,16 +93,6 @@
   foo( "string", true );
 &lt;/script&gt;
 </code></pre>
-
-<h2>
-<a id="nodejs--coffeescript" class="anchor" href="#nodejs--coffeescript" aria-hidden="true"><span class="octicon octicon-link"></span></a>NODEJS / COFFEESCRIPT</h2>
-
-<p>see the npm module <a href="https://www.npmjs.com/package/typeshave">here</a></p>
-
-<h2>
-<a id="php" class="anchor" href="#php" aria-hidden="true"><span class="octicon octicon-link"></span></a>PHP</h2>
-
-<p>see the composer more <a href="https://packagist.org/packages/coderofsalvation/typeshave">here</a> or the github repo <a href="https://github.com/coderofsalvation/typeshave.php">here</a></p>
 
 <h2>
 <a id="why-non-typesafe-is-great-except-with-phat-container-objects" class="anchor" href="#why-non-typesafe-is-great-except-with-phat-container-objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why non-typesafe is great, except with PHAT container-objects</h2>
