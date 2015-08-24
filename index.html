@@ -33,7 +33,7 @@
       <section id="main_content" class="inner">
         <p><img src="https://camo.githubusercontent.com/c784f14f7c15fec9fa475bd2789be46d2cb96943/687474703a2f2f636f6465726f6673616c766174696f6e2e6769746875622e696f2f7479706573686176652f6c6f676f2e706e67"><br>
 Wrap functions with typeshave to prevent functions doing garbage-in/garbage-out.
-Validate recursive structures like a boss!</p>
+Validate nested structures like a boss!</p>
 
 <h2>
 <a id="php-basics" class="anchor" href="#php-basics" aria-hidden="true"><span class="octicon octicon-link"></span></a>PHP BASICS</h2>
@@ -58,7 +58,7 @@ Validate recursive structures like a boss!</p>
 }
 </code></pre>
 
-<p><code>TYPESHAVE</code> uses the established <a href="http://jsonschema.net">jsonschema</a> validation-format, which allows extensive and recursive data-validation.
+<p><code>TYPESHAVE</code> uses the established <a href="http://jsonschema.net">jsonschema</a> validation-format, which allows extensive  nested data-validation.
 see the composer module <a href="https://packagist.org/packages/coderofsalvation/typeshave">here</a> or the github repo <a href="https://github.com/coderofsalvation/typeshave.php">here</a></p>
 
 <h2>
@@ -76,7 +76,7 @@ foo = typesafe                        var foo = typesafe({
 foo(); // fail please!                foo(); // fail please!
 </code></pre>
 
-<p><code>TYPESHAVE</code> uses the established <a href="http://jsonschema.net">jsonschema</a> validation-format, which allows extensive and recursive validation.
+<p><code>TYPESHAVE</code> uses the established <a href="http://jsonschema.net">jsonschema</a> validation-format, which allows extensive and nested datavalidation.
 See the npm module <a href="https://www.npmjs.com/package/typeshave">here</a></p>
 
 <h2>
@@ -98,7 +98,7 @@ See the npm module <a href="https://www.npmjs.com/package/typeshave">here</a></p
 </code></pre>
 
 <h2>
-<a id="why-non-typesafe-is-great-except-with-phat-container-objects" class="anchor" href="#why-non-typesafe-is-great-except-with-phat-container-objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why non-typesafe is great, except with PHAT container-objects</h2>
+<a id="why-non-typesafe-is-great-except-with-phat-nested-container-objects" class="anchor" href="#why-non-typesafe-is-great-except-with-phat-nested-container-objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why non-typesafe is great, except with PHAT nested container-objects</h2>
 
 <p>For example:</p>
 
@@ -164,7 +164,7 @@ PHP: }
 <h2>
 <a id="more-than-typesafe" class="anchor" href="#more-than-typesafe" aria-hidden="true"><span class="octicon octicon-link"></span></a>More than typesafe</h2>
 
-<p>Jsonschema can do more than typechecking, check the <a href="http://json-schema.org/documentation.html">docs here</a></p>
+<p>Jsonschema can do more than nested typechecking, check the <a href="http://json-schema.org/documentation.html">docs here</a></p>
 
 <pre><code>{
   foo:{
@@ -190,7 +190,7 @@ No more :</p>
 <li>functions going out of control</li>
 <li>assertions-bloat inside functions </li>
 <li>complaining about javascript not being typesafe</li>
-<li>unsafe recursive datastructures </li>
+<li>typesafe nested datastructures </li>
 <li>verbose unittests doing typesafe stuff </li>
 </ul>
 
