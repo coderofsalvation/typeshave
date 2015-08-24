@@ -144,6 +144,25 @@ PHP: }
 </code></pre>
 
 <h2>
+<a id="more-than-typesafe" class="anchor" href="#more-than-typesafe" aria-hidden="true"><span class="octicon octicon-link"></span></a>More than typesafe</h2>
+
+<p>Jsonschema can do more than typechecking, check the <a href="http://json-schema.org/documentation.html">docs here</a></p>
+
+<pre><code>{
+  foo:{
+    type: "string",
+    enum: ["simple","advanced","custom"]    
+  },
+  bar:{
+    type: "string",
+    minLength: 1,
+    maxLength: 100,
+    regex: "/[A-Za-z]/"
+  }
+}
+</code></pre>
+
+<h2>
 <a id="conclusion" class="anchor" href="#conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion</h2>
 
 <p>With typeshave you can replace all that with one line of code.
